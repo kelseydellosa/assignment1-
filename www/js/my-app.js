@@ -1,6 +1,10 @@
-//$(document).ready(function () {
-//    $(".preloader").fadeOut(2300);
-//});
+$(document).ready(function () {
+    $(".preloaders").delay(2000).fadeOut(1000);
+});
+
+$('.page-content').on('scroll', function () {
+  var scrollTop = this.scrollTop;
+})
 
 var app = new Framework7({
 	root: '#app',

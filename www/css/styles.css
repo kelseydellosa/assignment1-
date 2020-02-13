@@ -9,8 +9,10 @@ the !importan; flag to override the framework 7 css
 
 background-color: red !important;
 */
-/*
-.preloader{
+body{
+    overflow: scroll; 
+}
+.preloaders{
   align-items: center;
   background: rgb(23, 22, 22);
   display: flex;
@@ -20,10 +22,9 @@ background-color: red !important;
   position: fixed !important ;
   top: 0;
   transition: opacity 0.3s linear;
-  width: 10%;
+  width: 100%;
   z-index: 9999;
 }
-*/
 
 header {
 	width: 100%;
