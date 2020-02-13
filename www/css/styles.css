@@ -37,7 +37,6 @@ a {
 .da {
 	height: 300px;
 	padding: 15px;
-
 }
 
 .inspo {
@@ -184,8 +183,7 @@ header {
 	background-image: url('../imgs/home_flag-01.png');
 	background-size: cover;
 	background-position: center;
-	/*    background-repeat: no-repeat;*/
-	/*    position: relative;*/
+
 }
 
 .sd {
@@ -473,9 +471,6 @@ ul.todo#completed:after {
 	font-family: 'Open Sans Condensed', sans-serif !important;
 
 }
-
-
-
 
 .card-content {
 	height: 100vh;

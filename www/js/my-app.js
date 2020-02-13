@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $(".preloaders").delay(2000).fadeOut(700);
+    $(".preloaders").delay(1700).fadeOut(700);
 });
 
 var app = new Framework7({
