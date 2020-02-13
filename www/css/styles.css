@@ -57,21 +57,54 @@ a {
 }
 
 #date {
-	margin: 0 auto; 
-	height: 300px;
-	display: flex;
-	justify-content: center;
-	margin-top: 1.5em;
+	height: 100px;
+	text-align: center !important;
+	margin-top: 2.0em;
+	margin-left: -1em !important; 
 /*	margin-top: 2.3em;*/
 	color: white !important;
-	font-size: 60px !important;
+	font-size: 35px !important;
 	font-family: 'Roboto', sans-serif;
 }
 
 img {
 	width: 100%;
 }
+.page-content{
+	overflow: auto;
+}
+.cards{
+	overflow-y: scroll;
+}
+.demo-card-header-pic .card-header {
+  height: 50vw;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+.demo-card-header-pic .card-content-padding .date{
+  color: #8e8e93;
+}
+.card-content-padding{
+display: none; 
+}
 
+
+.dareu {
+	border-radius: 4px;
+	color: #fff;
+	background-color: #f4cc70;
+	width: 100%;
+	font-size: 21px;
+	font-weight: 100;
+	font-family: 'Satisfy', cursive !important;
+	padding: 1px;
+
+}
+#quoteDisplay, #quoteDisplays {
+	font-size: 20px !important ;
+	margin-left: 1em;
+}
 #critterselect {
 	width: 50%;
 	display: grid;
@@ -158,9 +191,8 @@ input {
 
 header {
 	width: 100%;
-	height: 35%;
+	height: 30%;
 	padding: none;
-	/*    background-color: #B7E6F8; */
 	background-image: url('../imgs/home_flag-01.png');
 	background-size: cover;
 	background-position: center;
@@ -410,7 +442,7 @@ ul.todo#completed:before {
 }
 
 ul.todo#todo:empty:after {
-	content: 'All out of dares...challenge yourself, again! 💪🏼';
+	content: 'All out of dares...challenge yourself again';
 	margin: 25px 0 0 0;
 	font-size: 1.1em;
 }
@@ -456,18 +488,6 @@ ul.todo#completed:after {
 
 
 
-.dareu {
-	margin-top: 20px;
-	border-radius: 4px;
-	color: #fff;
-	background-color: #f4cc70;
-	width: 100%;
-	font-size: 20px;
-	font-weight: 100;
-	font-family: 'Satisfy', cursive;
-	padding: 7px;
-
-}
 
 .card-content {
 	height: 100vh;
@@ -477,6 +497,3 @@ ul.todo#completed:after {
 	display: none;
 }
 
-#quoteDisplay, #quoteDisplays {
-	font-size: 30px !important ;
-}
