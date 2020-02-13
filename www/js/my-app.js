@@ -258,7 +258,7 @@ var quotesy = [
 		quote: "Take a road trip across North America."
 	},
 	{
-		quote: "Go to Vegas for a day."
+		quote: "Make friends with 5 people from another country."
 	},
 	{
 		quote: "Conquer a phobia in another country."
