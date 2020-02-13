@@ -1,14 +1,3 @@
-/*Do an inspect element on chrome to find where css is being applied on the framework 7 items
-i.e. if you inspect the navbar css 
-           1. On chrome inspect click: <div data-brackets-id="719" class="navbar-bg"></div>
-            2. It will show all the css being used on the nav bar
-*/
-/*
-If the above doesn't work and the framwork 7 css is "winning" and your css isn't going through add
-the !importan; flag to override the framework 7 css
-
-background-color: red !important;
-*/
 body{
     overflow: scroll; 
 }
