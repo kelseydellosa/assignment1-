@@ -3,15 +3,15 @@
 //});
 
 var app = new Framework7({
-    root: '#app',
-    routes: [
-        {
-            path: '/',
-            url: 'index.html'
+	root: '#app',
+	routes: [
+		{
+			path: '/',
+			url: 'index.html'
         },
-        {
-            path: '/page2/',
-            url: 'pages/page2.html'
+		{
+			path: '/page2/',
+			url: 'pages/page2.html'
         }
     ]
 })
@@ -20,15 +20,11 @@ var mainView = app.views.create(".view-main");
 
 console.log("bonjour");
 
-//global variables 
-//var needs = ["I'm hungry!", "I'm thirsty", "Let me out!"];
-//var counter = 0;
-//var cSrc;
 var $$ = Dom7;
 
 var data = (localStorage.getItem('todoList')) ? JSON.parse(localStorage.getItem('todoList')) : {
-    todo: [],
-    completed: []
+	todo: [],
+	completed: []
 };
 
 // Remove and complete icons in SVG format
@@ -40,146 +36,235 @@ renderTodoList();
 // User clicked on the add button
 // If there is any text inside the item field, add that text to the todo list
 document.getElementById('add').addEventListener('click', function () {
-    var value = document.getElementById('item').value;
-    if (value) {
-        addItem(value);
-    }
+	var value = document.getElementById('item').value;
+	if (value) {
+		addItem(value);
+	}
 });
 
 document.getElementById('item').addEventListener('keydown', function (e) {
-    var value = this.value;
-    if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
-        addItem(value);
-    }
+	var value = this.value;
+	if ((e.code === 'Enter' || e.code === 'NumpadEnter') && value) {
+		addItem(value);
+	}
 });
 
 function addItem(value) {
-    addItemToDOM(value);
-    document.getElementById('item').value = '';
+	addItemToDOM(value);
+	document.getElementById('item').value = '';
 
-    data.todo.push(value);
-    dataObjectUpdated();
+	data.todo.push(value);
+	dataObjectUpdated();
 }
+
 
 function renderTodoList() {
-    if (!data.todo.length && !data.completed.length) return;
+	if (!data.todo.length && !data.completed.length) return;
 
-    for (var i = 0; i < data.todo.length; i++) {
-        var value = data.todo[i];
-        addItemToDOM(value);
-    }
+	for (var i = 0; i < data.todo.length; i++) {
+		var value = data.todo[i];
+		addItemToDOM(value);
+	}
 
-    for (var j = 0; j < data.completed.length; j++) {
-        var value = data.completed[j];
-        addItemToDOM(value, true);        
-    }
+	for (var j = 0; j < data.completed.length; j++) {
+		var value = data.completed[j];
+		addItemToDOM(value, true);
+	}
 }
+
 
 function dataObjectUpdated() {
-    localStorage.setItem('todoList', JSON.stringify(data));
-    $("#completed.todo").appendTo("<'/page2/'>");
-//
-//    //    localStorage.getItem('/page2/', JSON.stringify(data));
-//
+	localStorage.setItem('todoList', JSON.stringify(data));
 }
-$("#completed").on("click", function() { 
-            console.log("hello");
-            localStorage.getItem('completed', JSON.stringify(data));
-            $("#completed").appendTo("<'/page2/'>");
-
-     })
-
 
 function removeItem() {
-    var item = this.parentNode.parentNode;
-    var parent = item.parentNode;
-    var id = parent.id;
-    var value = item.innerText;
+	var item = this.parentNode.parentNode;
+	var parent = item.parentNode;
+	var id = parent.id;
+	var value = item.innerText;
 
-    if (id === 'todo') {
-        data.todo.splice(data.todo.indexOf(value), 1);
-    } else {
-        data.completed.splice(data.completed.indexOf(value), 1);
-    }
-    dataObjectUpdated();
+	if (id === 'todo') {
+		data.todo.splice(data.todo.indexOf(value), 1);
+	} else {
+		data.completed.splice(data.completed.indexOf(value), 1);
+	}
+	dataObjectUpdated();
 
-    parent.removeChild(item);
+	parent.removeChild(item);
+
 }
 
 function completeItem() {
-    var item = this.parentNode.parentNode;
-    var parent = item.parentNode;
-    var id = parent.id;
-    var value = item.innerText;
+	var item = this.parentNode.parentNode;
+	var parent = item.parentNode;
+	var id = parent.id;
+	var value = item.innerText;
 
-    if (id === 'todo') {
-        data.todo.splice(data.todo.indexOf(value), 1);
-        data.completed.push(value);
-    } else {
-        data.completed.splice(data.completed.indexOf(value), 1);
-        data.todo.push(value);
-    }
-    dataObjectUpdated();
+	if (id === 'todo') {
+		data.todo.splice(data.todo.indexOf(value), 1);
+		data.completed.push(value);
+	} else {
+		data.completed.splice(data.completed.indexOf(value), 1);
+		data.todo.push(value);
+	}
+	dataObjectUpdated();
 
-    // Check if the item should be added to the completed list or to re-added to the todo list
-    var target = (id === 'todo') ? document.getElementById('completed') : document.getElementById('todo');
+	//	 Check if the item should be added to the completed list or to re-added to the todo list
+	var target = (id === 'todo') ? document.getElementById('completed') : document.getElementById('todo');
 
-    parent.removeChild(item);
-    target.insertBefore(item, target.childNodes[0]);
+	parent.removeChild(item);
+	target.insertBefore(item, target.childNodes[0]);
+
 }
+
 
 // Adds a new item to the todo list
 function addItemToDOM(text, completed) {
-    var list = (completed) ? document.getElementById('completed') : document.getElementById('todo');
+	var list = (completed) ? document.getElementById('completed') : document.getElementById('todo');
 
-    var item = document.createElement('li');
-    item.innerText = text;
+	var item = document.createElement('li');
+	item.innerText = text;
 
-    var buttons = document.createElement('div');
-    buttons.classList.add('buttons');
+	var buttons = document.createElement('div');
+	buttons.classList.add('buttons');
 
-    var remove = document.createElement('button');
-    remove.classList.add('remove');
-    remove.innerHTML = removeSVG;
+	var remove = document.createElement('button');
+	remove.classList.add('remove');
+	remove.innerHTML = removeSVG;
 
-    // Add click event for removing the item
-    remove.addEventListener('click', removeItem);
+	// Add click event for removing the item
+	remove.addEventListener('click', removeItem);
 
-    var complete = document.createElement('button');
-    complete.classList.add('complete');
-    complete.innerHTML = completeSVG;
+	var complete = document.createElement('button');
+	complete.classList.add('complete');
+	complete.innerHTML = completeSVG;
 
-    // Add click event for completing the item
-    complete.addEventListener('click', completeItem);
+	// Add click event for completing the item
+	complete.addEventListener('click', completeItem);
 
-    buttons.appendChild(remove);
-    buttons.appendChild(complete);
-    item.appendChild(buttons);
 
-    list.insertBefore(item, list.childNodes[0]);
+	buttons.appendChild(remove);
+	buttons.appendChild(complete);
+	item.appendChild(buttons);
+
+	list.insertBefore(item, list.childNodes[0]);
+
 }
 
 //show today's date 
 
-//const dateElement = document.getElementById("date");
-//
-//const options = {
-//    weekday: "long",
-//    month: "short",
-//    day: "numeric"
-//};
-//const today = new Date();
-//dateElement.innerHTML = today.toLocaleDateString("en-US", options);
+const dateElement = document.getElementById("date");
 
-var calendarModal = app.calendar.create({
-    inputEl: '#demo-calendar-modal',
-    openIn: 'customModal',
-    header: true,
-    footer: true,
-});
+const options = {
+    weekday: "long",
+    month: "short",
+    day: "numeric"
+};
+const today = new Date();
+dateElement.innerHTML = today.toLocaleDateString("en-US", options);
+
+//var calendarModal = app.calendar.create({
+//	inputEl: '#demo-calendar-modal',
+//	openIn: 'customModal',
+//	header: true,
+//	footer: true,
+//});
+
+var quotes = [
+	{
+		author: "Jess C. Scott",
+		source: "The Darker Side of Life",
+		quote: "The brightest light casts the darkest shadow."
+	},
+	{
+		author: "Neal Stephenson",
+		source: "Snow Crash",
+		quote: "To condense fact from the vapor of nuance."
+	},
+	{
+		author: "William Gibson",
+		source: "Neuromancer",
+		quote: "Falling burned and blinded through a Siberian sky."
+	},
+	{
+		author: "Anna L. Davis",
+		source: "Open Source",
+		quote: "I’d been an outcast my entire life. Growing up with technophobe parents in the dawn of a Cyborg Age did that to a person."
+	},
+	{
+		author: "Eric Schmidth",
+		source: "Dystopian Times",
+		quote: "The Internet is the first thing that humanity has built that humanity doesn’t understand, the largest experiment in anarchy that we have ever had."
+	},
+	{
+		author: "Philip K. Dick",
+		source: "Do Androids Dream of Electric Sheep?",
+		quote: "You will be required to do wrong no matter where you go. It is the basic condition of life, to be required to violate your own identity."
+	},
+	{
+		author: "William Gibson",
+		source: "Johnny Mnemonic",
+		quote: "It’s impossible to move, to live, to operate at any level without leaving traces, bits, seemingly meaningless fragments of personal information. Fragments that can be retrieved, amplified…"
+	},
+	{
+		author: "Lain Iwakura",
+		source: "Serial Experiments: Lain",
+		quote: "No matter where you go, everyone’s connected."
+	},
+	{
+		author: "William Gibson",
+		source: "Zero History",
+		quote: "When you want to know how things really work, study them when they’re coming apart."
+	},
+	{
+		author: "Jeff Somers",
+		source: "The Electric Church",
+		quote: "Let me show you an endless trail of sunsets."
+	},
+	{
+		author: "Roy Batty",
+		source: "Blade Runner",
+		quote: "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched c-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die."
+	},
+	{
+		author: "Neal Stephenson",
+		source: "Snow Crash",
+		quote: "See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places."
+	},
+	{
+		author: "Neal Stephenson",
+		source: "Snow Crash",
+		quote: "Jack the sound barrier. Bring the noise."
+	},
+	{
+		author: "Neal Stephenson",
+		source: "Snow Crash",
+		quote: "Well, all information looks like noise until you break the code."
+	}
+  ];
+
+function newQuote() {
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber].quote;
+
+}
+function newQuotes() {
+	var randomNumber = Math.floor(Math.random() * (quotes.length));
+	document.getElementById('quoteDisplays').innerHTML = quotes[randomNumber].quote;
+
+}
+
+//function init() {
+//	var main;
+//	var input = document.getElementByClass("button");
+//	    input.addEventListener("click", function(){
+//        var main_array= ["avocado","corn", "eggplant", "hotdog", "chicken"]
+//        var rand = Math.floor(Math.random() * 4);
+//        console.log(main_array[rand]); 
+//        callAjax(main_array[rand], "main-info", "mainHash", "imagebox"); 
+//        audio.play(); 
 //
-//function valueSender(){
-//    var a=101; 
-//    localStorage.setItem("myValue", a); 
-//    window.location.href="index.html"; 
+//    }); 
+//
 //}
+
