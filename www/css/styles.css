@@ -149,7 +149,7 @@ button {
 }
 
 input {
-	font-size: 1.6em !important;
+	font-size: 1.5em !important;
 }
 
 .noFill {
@@ -410,13 +410,13 @@ ul.todo#completed:before {
 }
 
 ul.todo#todo:empty:after {
-	content: 'All out of dares. Challenge yourself again!';
+	content: 'All out of dares...challenge yourself, again! 💪🏼';
 	margin: 25px 0 0 0;
 	font-size: 1.1em;
 }
 
 ul.todo#completed:empty:after {
-	content: 'No dares completed yet.';
+	content: 'No dares completed yet 👀';
 	font-size: 1.1em;
 
 }
@@ -477,6 +477,6 @@ ul.todo#completed:after {
 	display: none;
 }
 
-.quoteDisplay {
-	padding-top: 20px !important;
+#quoteDisplay, #quoteDisplays {
+	font-size: 30px !important ;
 }

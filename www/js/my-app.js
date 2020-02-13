@@ -174,92 +174,96 @@ var quotes = [
 	{
 		author: "Jess C. Scott",
 		source: "The Darker Side of Life",
-		quote: "The brightest light casts the darkest shadow."
+		quote: "Not eat junk food for 30 days."
 	},
 	{
-		quote: "To condense fact from the vapor of nuance."
+		quote: "Only eat homemade meals for 2 months."
 	},
 	{
-		quote: "Falling burned and blinded through a Siberian sky."
+		quote: "Eat more plant based foods."
 	},
 	{
-		quote: "I’d been an outcast my entire life. Growing up with technophobe parents in the dawn of a Cyborg Age did that to a person."
+		quote: "Maintain a cheerful, hopeful outlook for a week."
 	},
 	{
-		quote: "The Internet is the first thing that humanity has built that humanity doesn’t understand, the largest experiment in anarchy that we have ever had."
+		quote: "Be free of dependence on tobacco, illicit drugs, or alcohol."
 	},
 	{
-		quote: "You will be required to do wrong no matter where you go. It is the basic condition of life, to be required to violate your own identity."
+		quote: "Do at least 60 minutes of physical activity for a week straight."
 	},
 	{
-		quote: "It’s impossible to move, to live, to operate at any level without leaving traces, bits, seemingly meaningless fragments of personal information. Fragments that can be retrieved, amplified…"
+		quote: "Be free of dependence on tobacco, illicit drugs, or alcohol"
 	},
 	{
-		quote: "No matter where you go, everyone’s connected."
+		quote: "Stretch for 30 minutes a day."
 	},
 	{
-		quote: "When you want to know how things really work, study them when they’re coming apart."
+		quote: "Sign up for the local 5km marathon."
 	},
 	{
-		quote: "Let me show you an endless trail of sunsets."
+		quote: "Walk your dog at 6am everyday."
 	},
 	{
-		quote: "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched c-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die."
+		quote: "Plank it out for a strong core and arms for longer than 5 minutes."
 	},
 	{
-		quote: "See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places."
+		quote: "Do something active every week that calms you."
 	},
 	{
-		quote: "Jack the sound barrier. Bring the noise."
+		quote: "Use only public transportation and physical exercise to commute to work/school for a month."
 	},
 	{
-		quote: "Well, all information looks like noise until you break the code."
-	}
+		quote: "Drink more than a litre of water per day for a month."
+	},
+	{
+		quote: "Be mindful of your posture for a month straight."
+	},
+
   ];
 var quotesy = [
 	{
 		author: "Jess C. Scott",
 		source: "The Darker Side of Life",
-		quote: "kels"
+		quote: "Hop on a random flight."
 	},
 	{
-		quote: "kels"
+		quote: "Visit one new country each year."
 	},
 	{
-		quote: "kels"
+		quote: "Volunteer abroad."
 	},
 	{
-		quote: "kels."
+		quote: "Try at least 10 new dishes in a year."
 	},
 	{
-		quote: "The Internet is the first thing that humanity has built that humanity doesn’t understand, the largest experiment in anarchy that we have ever had."
+		quote: "Finally take a solo back-packing trip."
 	},
 	{
-		quote: "You will be required to do wrong no matter where you go. It is the basic condition of life, to be required to violate your own identity."
+		quote: "Explore more of your own country."
 	},
 	{
-		quote: "It’s impossible to move, to live, to operate at any level without leaving traces, bits, seemingly meaningless fragments of personal information. Fragments that can be retrieved, amplified…"
+		quote: "Visit the alpacas in Peru."
 	},
 	{
-		quote: "No matter where you go, everyone’s connected."
+		quote: "Go on a vacation with your family for longer than a month."
 	},
 	{
-		quote: "When you want to know how things really work, study them when they’re coming apart."
+		quote: "Climb a coconut tree."
 	},
 	{
-		quote: "Let me show you an endless trail of sunsets."
+		quote: "Swim with the dolphins."
 	},
 	{
-		quote: "I've seen things you people wouldn't believe. Attack ships on fire off the shoulder of Orion. I watched c-beams glitter in the dark near the Tannhäuser Gate. All those moments will be lost in time, like tears in rain. Time to die."
+		quote: "Pick a travel desitnation from a favourite film of yours (if possible)."
 	},
 	{
-		quote: "See, the world is full of things more powerful than us. But if you know how to catch a ride, you can go places."
+		quote: "Take a road trip across North America."
 	},
 	{
-		quote: "Jack the sound barrier. Bring the noise."
+		quote: "Go to Vegas for a day."
 	},
 	{
-		quote: "Well, all information looks like noise until you break the code."
+		quote: "Conquer a phobia in another country."
 	}
   ];
 
