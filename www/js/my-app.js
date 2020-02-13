@@ -57,7 +57,6 @@ function addItem(value) {
 	dataObjectUpdated();
 }
 
-
 function renderTodoList() {
 	if (!data.todo.length && !data.completed.length) return;
 
@@ -71,7 +70,6 @@ function renderTodoList() {
 		addItemToDOM(value, true);
 	}
 }
-
 
 function dataObjectUpdated() {
 	localStorage.setItem('todoList', JSON.stringify(data));
@@ -180,7 +178,7 @@ var quotes = [
 		quote: "Only eat homemade meals for 2 months."
 	},
 	{
-		quote: "Eat more plant based foods."
+		quote: "Eat more plant-based foods."
 	},
 	{
 		quote: "Maintain a cheerful, hopeful outlook for a week."
@@ -279,16 +277,4 @@ function newQuotes() {
 
 }
 
-//function init() {
-//	var main;
-//	var input = document.getElementByClass("button");
-//	    input.addEventListener("click", function(){
-//        var main_array= ["avocado","corn", "eggplant", "hotdog", "chicken"]
-//        var rand = Math.floor(Math.random() * 4);
-//        console.log(main_array[rand]); 
-//        callAjax(main_array[rand], "main-info", "mainHash", "imagebox"); 
-//        audio.play(); 
-//
-//    }); 
-//
-//}
+
