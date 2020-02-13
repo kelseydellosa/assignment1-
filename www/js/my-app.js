@@ -170,111 +170,133 @@ dateElement.innerHTML = today.toLocaleDateString("en-US", options);
 
 var quotes = [
 	{
-		author: "Jess C. Scott",
-		source: "The Darker Side of Life",
-		quote: "Not eat junk food for 30 days."
+		text: "Not eat junk food for 30 days.", 
+        img:  "imgs/nojunk.png"   
 	},
 	{
-		quote: "Only eat homemade meals for 2 months."
+		text: "Eat more plant-based foods.", 
+                img:  "imgs/plantbased.jpg"   
+
 	},
 	{
-		quote: "Eat more plant-based foods."
+		text: "Maintain a cheerful, hopeful outlook for a week.",
+                img:  "imgs/happy.jpg"   
+
 	},
 	{
-		quote: "Maintain a cheerful, hopeful outlook for a week."
+		text: "Be free of dependence on tobacco, illicit drugs, or alcohol.", 
+                img:  "imgs/sober.jpg"   
+
 	},
 	{
-		quote: "Be free of dependence on tobacco, illicit drugs, or alcohol."
+		text: "Do at least 60 minutes of physical activity for a week straight.", 
+                img:  "imgs/exercise.jpg"   
+
 	},
 	{
-		quote: "Do at least 60 minutes of physical activity for a week straight."
+		text:"Stretch for 30 minutes a day.", 
+                img:  "imgs/stretch.jpg"   
+
 	},
 	{
-		quote: "Be free of dependence on tobacco, illicit drugs, or alcohol"
+		text: "Sign up for the local 5km marathon.", 
+                img:  "imgs/marathon.jpg"   
+
 	},
 	{
-		quote: "Stretch for 30 minutes a day."
+		text: "Walk your dog at 6am everyday.", 
+                img:  "imgs/dog.jpg"   
+
 	},
 	{
-		quote: "Sign up for the local 5km marathon."
+	   text: "Plank it out for a strong core and arms for longer than 5 minutes.", 
+                img:  "imgs/plank.jpg"   
+
 	},
 	{
-		quote: "Walk your dog at 6am everyday."
+		text: "Do something active every week that calms you.", 
+                img:  "imgs/yoga.jpg"   
+
 	},
 	{
-		quote: "Plank it out for a strong core and arms for longer than 5 minutes."
+		text: "Use only public transportation and physical exercise to commute to work/school for a month.", 
+                img:  "imgs/transit.jpg"   
+
 	},
 	{
-		quote: "Do something active every week that calms you."
-	},
-	{
-		quote: "Use only public transportation and physical exercise to commute to work/school for a month."
-	},
-	{
-		quote: "Drink more than a litre of water per day for a month."
-	},
-	{
-		quote: "Be mindful of your posture for a month straight."
+		text: "Drink more than a litre of water per day for a month.", 
+                img:  "imgs/water.jpg"   
+
 	},
 
   ];
 var quotesy = [
 	{
-		author: "Jess C. Scott",
-		source: "The Darker Side of Life",
-		quote: "Hop on a random flight."
+		text: "Hop on a random flight.", 
+                img:  "imgs/flight.jpg"   
 	},
 	{
-		quote: "Visit one new country each year."
+		text: "Visit one new country each year.", 
+        img: "imgs/country.jpg", 
 	},
 	{
-		quote: "Volunteer abroad."
+		text: "Try at least 10 new dishes in a year.", 
+        img:"imgs/dishes.jpg" 
 	},
 	{
-		quote: "Try at least 10 new dishes in a year."
+		text: "Finally take a solo back-packing trip.", 
+        img: "imgs/solo.jpg" 
 	},
 	{
-		quote: "Finally take a solo back-packing trip."
+		text: "Explore more of your own country.", 
+         img: "imgs/local.jpg" 
 	},
 	{
-		quote: "Explore more of your own country."
+		text: "Visit the alpacas in Peru.", 
+         img: "imgs/alpaca.jpg" 
 	},
 	{
-		quote: "Visit the alpacas in Peru."
+		text: "Go on a vacation with your family for longer than 2 weeks", 
+         img: "imgs/family.jpg" 
 	},
 	{
-		quote: "Go on a vacation with your family for longer than a month."
+		text: "Climb a coconut tree.", 
+         img: "imgs/coconut.jpg" 
 	},
 	{
-		quote: "Climb a coconut tree."
+		text: "Pick a travel desitnation from a favourite film of yours (if possible).", 
+         img: "imgs/movie.jpg" 
 	},
 	{
-		quote: "Swim with the dolphins."
-	},
-	{
-		quote: "Pick a travel desitnation from a favourite film of yours (if possible)."
-	},
-	{
-		quote: "Take a road trip across North America."
-	},
-	{
-		quote: "Make friends with 5 people from another country."
-	},
-	{
-		quote: "Conquer a phobia in another country."
+		text: "Conquer a phobia in another country.", 
+         img: "imgs/phobia.jpg" 
 	}
   ];
 
-function newQuote() {
-	var randomNumber = Math.floor(Math.random() * (quotes.length));
-	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber].quote;
+//function newQuote() {
+//	var randomNumber = Math.floor(Math.random() * (quotes.length));
+//	document.getElementById('quoteDisplay').innerHTML = quotes[randomNumber].quote;
+//
+//}
+//
+//function newQuotes() {
+//	var randomNumbers = Math.floor(Math.random() * (quotesy.length));
+//	document.getElementById('quoteDisplays').innerHTML = quotesy[randomNumbers].quote;
+//
+//}
+
+function newQuote(){    
+var quote = quotes[Math.floor(Math.random() * quotes.length)];
+      document.getElementById('quoteDisplay').innerHTML =
+        '<p>' + quote.text + '</p>' +
+        '<img src="' + quote.img + '">';
 
 }
 
-function newQuotes() {
-	var randomNumbers = Math.floor(Math.random() * (quotesy.length));
-	document.getElementById('quoteDisplays').innerHTML = quotesy[randomNumbers].quote;
+function newQuotes(){    
+var quotes = quotesy[Math.floor(Math.random() * quotesy.length)];
+      document.getElementById('quoteDisplays').innerHTML =
+        '<p>' + quotes.text + '</p>' +
+        '<img src="' + quotes.img + '">';
 
 }
-
-

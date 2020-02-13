@@ -480,3 +480,9 @@ ul.todo#completed:after {
 	display: none;
 }
 
+.health, .travel{
+    text-align: center; 
+    color: #82D182;
+}
+
+

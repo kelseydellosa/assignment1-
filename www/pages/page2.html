@@ -5,18 +5,20 @@ I wasn't able to figure out how to get the data stored in the array to appear, b
 <div class="page" data-name="page2">
 	<div class="page-content">
 
+<!-- ended up not using framework 7 cards in order to have random pics
 		<div class="cards">
 			<div class="card demo-card-header-pic">
 				<div style="background-image:url(imgs/healthnfit.jpg)" class="card-header align-items-flex-end">HEALTH AND FITNESS</div>
 				<div class="card-content card-content-padding">
 				</div>
-				<div class="card-footer"> <button onclick="newQuote()" class="dareu">I dare you to...</button></div>
+				<div class="card-footer"> <button onclick="newQuote()" class="dareu"><p>I dare you to...</p></button></div>
 				<div id="quoteDisplay">
 				</div>
 			</div>
 
 			<div class="card demo-card-header-pic">
-				<div style="background-image:url(imgs/travel.jpg)" class="card-header align-items-flex-end">TRAVEL</div>
+				<div style="background-image:url(imgs/travel.jpg)" class="card-header align-items-flex-end"></div>
+                <h1>TRAVEL</h1>
 				<div class="card-content card-content-padding">
 				</div>
 				<div class="card-footer"><button onclick="newQuotes()" class="dareu">I dare you to...</button></div>
@@ -24,6 +26,19 @@ I wasn't able to figure out how to get the data stored in the array to appear, b
 
 			</div>
 		</div>
+-->
+		<div class="cards">
+			<div class="health">
+				<h1>HEALTH AND FITNESS</h1>
+                    <button onclick="newQuote()" class="dareu"><p>I dare you to...</p></button>
+				    <div id="quoteDisplay"></div>
+            </div> 
+		
+			<div class="travel">
+				<h1>TRAVEL</h1>
+                <button onclick="newQuotes()" class="dareu">I dare you to...</button>
+				<div id="quoteDisplays"></div>
+			</div>
+		</div>
 	</div>
 
-</div>
