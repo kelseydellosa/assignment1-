@@ -38,7 +38,6 @@ header {
 
 .sd {
 	padding: 1px;
-	font-family: 'Roboto', sans-serif;
 	font-family: 'Open Sans Condensed', sans-serif !important;
 	font-weight: 100;
 }
@@ -58,12 +57,12 @@ a {
 }
 
 #date {
-	margin-left: auto;
-	margin-right: auto;
+	margin: 0 auto; 
 	height: 300px;
 	display: flex;
 	justify-content: center;
-	margin-top: 2.3em;
+	margin-top: 1.5em;
+/*	margin-top: 2.3em;*/
 	color: white !important;
 	font-size: 60px !important;
 	font-family: 'Roboto', sans-serif;
@@ -146,8 +145,11 @@ body {
 body,
 input,
 button {
-	font-family: 'Roboto', sans-serif;
-	color: !important red; 
+	font-family: 'Open Sans Condensed', sans-serif !important;
+}
+
+input {
+	font-size: 1.6em !important;
 }
 
 .noFill {
@@ -409,11 +411,14 @@ ul.todo#completed:before {
 
 ul.todo#todo:empty:after {
 	content: 'All out of dares. Challenge yourself again!';
-	margin: 15px 0 0 0;
+	margin: 25px 0 0 0;
+	font-size: 1.1em;
 }
 
 ul.todo#completed:empty:after {
 	content: 'No dares completed yet.';
+	font-size: 1.1em;
+
 }
 
 ul.todo#todo:after,
@@ -427,29 +432,41 @@ ul.todo#completed:after {
 
 .bg-color-red {
 	--f7-card-expandable-bg-color:  !important #fff;
-	height: 40%;
+	height: 100%;
 	padding: none;
-	background-image: url('../imgs/bg2.jpg');
+	background-image: url('../imgs/healthnfit.jpg');
+	opacity: 0.9;
 	background-size: cover;
 	background-position: center;
+	font-family: 'Open Sans Condensed', sans-serif !important;
+
 }
 
 .bg-color-yellow {
-	--f7-card-expandable-bg-color:  !important #fff;
+	--f7-card-header-text-color: white !important;
 	height: 40%;
 	padding: none;
-	background-image: url('../imgs/bg2.jpg');
+	background-image: url('../imgs/travel.jpg');
+	opacity: 0.8;
 	background-size: cover;
 	background-position: center;
+	font-family: 'Open Sans Condensed', sans-serif !important;
+
 }
+
+
 
 .dareu {
 	margin-top: 20px;
 	border-radius: 4px;
-	color: #2cc8fc;
+	color: #fff;
+	background-color: #f4cc70;
 	width: 100%;
-	font-size: 15px;
-	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 100;
+	font-family: 'Satisfy', cursive;
+	padding: 7px;
+
 }
 
 .card-content {
@@ -458,4 +475,8 @@ ul.todo#completed:after {
 
 .link card-close card-opened-fade-in color-white {
 	display: none;
+}
+
+.quoteDisplay {
+	padding-top: 20px !important;
 }
