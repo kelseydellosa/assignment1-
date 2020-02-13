@@ -177,7 +177,7 @@ $(function () {
         }
     });
 
-    $('#open_todo').on('click', function () {
+    $('#open_todoT').on('click', function () {
         $('.counter').removeClass('numric-animated');
         $('#overlay, #card-main').fadeIn();
     });

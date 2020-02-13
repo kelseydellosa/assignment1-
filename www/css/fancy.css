@@ -56,14 +56,14 @@ body{
         -ms-flex-pack: center;
             justify-content: center;
 }
-.todo{
+.todoT{
     background: #fff;
     width: 100%;
     height: 50vh; 
     position: relative;
     border-bottom: 5px solid #004973;
 } 
-.todo:before {
+.todoT:before {
     position: absolute;
     content: '';
     left: 1em;
@@ -1465,7 +1465,7 @@ display: none!important
         overflow: hidden;
         pointer-events: none;
 }
-#open_todo{
+#open_todoT{
     position: relative;
     width: 50px;
     height: 50px;
@@ -1484,7 +1484,7 @@ display: none!important
     border-top-left-radius: 50%;
     border-top-right-radius: 50%;
 }
-#open_todo:before {
+#open_todoT:before {
   content: '';
   background:  #004973;
   width: 50px;
@@ -1496,7 +1496,7 @@ display: none!important
     pointer-events: none;
 }
 
-#open_todo:after {
+#open_todoT:after {
   content: '';
   background:  #004973;;
   width: 50px;
